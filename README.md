@@ -1,0 +1,1 @@
+# THS-Child-Theme
