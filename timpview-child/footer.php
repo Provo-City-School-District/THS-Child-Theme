@@ -11,7 +11,7 @@
 				 	<li><a href="https://grades.provo.edu/teachers/pw.html"><img src="https://timpview.provo.edu/wp-content/themes/pcsd-2019-theme/assets/icons/power-school.png" alt="" />PowerTeacher Login</a></li>
 				 	<li><a href="https://provo.instructure.com/login/saml/13"><img src="https://timpview.provo.edu/wp-content/themes/pcsd-2019-theme/assets/icons/file-white.svg" alt="" />Canvas Login</a></li>
 				 	<li class="employeelink"><a href="https://employee.provo.edu/"><img src="https://timpview.provo.edu/wp-content/uploads/2017/12/pcsd-logo-website-header-branding.png" alt="" />Employee Support Website</a></li>
-				 	
+
 				</ul>
 			</section>
 			<?php
@@ -25,7 +25,7 @@
 		// close cURL resource, and free up system resources
 		curl_close($globalfooter);
 	?>
-			
+
 		</footer>
 		<?php wp_footer(); ?>
 		<script type="text/javascript" src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script>
@@ -40,7 +40,7 @@
 		        searchInputs: ['cludo-search-form'],
 		        template: 'StandardInlineImages',
 		        type: 'inline',
-		        initFacets: { "Category": ["Timpview High"] }     
+		        initFacets: { "Category": ["Timpview High"] }
 		    };
 		CludoSearch= new Cludo(cludoSettings);
 		CludoSearch.init();
