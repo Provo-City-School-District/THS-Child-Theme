@@ -67,3 +67,33 @@ function single_submenu_dropdown_link_example() {
 }
 add_action('admin_menu', 'single_submenu_dropdown_link_example');
 }
+/*==========================================================================================
+// ShortCodes
+============================================================================================*/
+//Display Modified Date [modified-date]
+function modifiedDate_func(){
+	if(!is_page(array(43440,43437,43399,42984,43435, 42742,42740,42744,42746))) {
+		?>
+		 <p class="lastmodified"><em>Last modified: <?php the_modified_date(); ?></em></p>
+		<?php
+	}
+}
+add_shortcode( 'modified-date', 'modifiedDate_func' );
+//sidebar controll [sidebar-control]
+function sidebar_func(){
+		//global $post;
+		if(in_array( 43177, get_post_ancestors($post))) {
+			   get_sidebar( 'about-timpview' );
+		   } elseif(in_array( 42312, get_post_ancestors($post))) {
+			   get_sidebar( 'counseling' );
+		   } elseif(in_array( 43352, get_post_ancestors($post))) {
+			   get_sidebar( 'extracurricular' );
+		   } elseif(in_array( 43027, get_post_ancestors($post))) {
+			   get_sidebar( 'policies-forms' );
+		   } elseif(in_array( 42310, get_post_ancestors($post))) {
+			   get_sidebar( 'faculty-staff' );
+		   } else {
+			   get_sidebar( $sidebar );
+		   }
+}
+add_shortcode( 'sidebar-control', 'sidebar_func' );
